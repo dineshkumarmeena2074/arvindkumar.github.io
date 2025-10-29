@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Er. Arvind - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Er.<span>Arvind</span></div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Testimonial</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Dark Mode Button -->
+    <button id="toggle">🌙 Dark Mode</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <h3>Hi! I am</h3>
+      <h1>Arvind<span>Kumar</span></h1>
+      <h2>A Professional <span>Visual Designer</span></h2>
+      <div class="buttons">
+        <a href="#" class="btn">Contact</a>
+        <a href="#" class="btn">Resume</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="#"><img src="instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="github.svg" alt="GitHub"></a>
+        <a href="#"><img src="linkedin.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="circle-frame">
+        <img src="your-photo.jpg" alt="Arvind Kumar">
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      if (document.body.classList.contains('dark')) {
+        toggle.textContent = '☀️ Light Mode';
+      } else {
+        toggle.textContent = '🌙 Dark Mode';
+      }
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me Section</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="about-section">
+    <div class="about-container">
+      <div class="about-text">
+        <h3>About Me</h3>
+        <h1>Learn Something About Me</h1>
+        <p>
+          I’m a professional front-end web developer from <b>CITM Jaipur</b>.  
+          I specialize in creating blazing-fast and fully responsive UIs and web apps  
+          using JavaScript frameworks and libraries.
+        </p>
+        <p class="quote">
+          "Transforming visions into digital reality."
+        </p>
+        <button class="btn">Download CV</button>
+      </div>
+
+      <div class="about-image">
+        <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" alt="Team Illustration">
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<!-- ⚡ Services Section -->
+<section class="services-section">
+  <h3 class="section-subtitle">My Services</h3>
+  <h1 class="section-title">What Can You Expect From Me?</h1>
+
+  <div class="services-grid">
+    <div class="service-card electric-blue">
+      <div class="glow"></div>
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Web Design Icon">
+        <h2>Web Design</h2>
+        <p>I like to craft solid and scalable front-end products with great user experiences.</p>
+      </div>
+    </div>
+
+    <div class="service-card electric-orange">
+      <div class="glow"></div>
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" alt="Development Icon">
+        <h2>Development</h2>
+        <p>I like to code things from scratch and enjoy bringing ideas to life in the browser.</p>
+      </div>
+    </div>
+
+    <div class="service-card electric-pink">
+      <div class="glow"></div>
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/1829/1829589.png" alt="Visual Design Icon">
+        <h2>Visual Designs</h2>
+        <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+      </div>
+    </div>
+
+    <div class="service-card electric-green">
+      <div class="glow"></div>
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081126.png" alt="Responsive Design Icon">
+        <h2>Responsive Design</h2>
+        <p>A responsive design makes your website look good on all devices.</p>
+      </div>
+    </div>
+
+    <div class="service-card electric-purple">
+      <div class="glow"></div>
+      <div class="inner">
+        <img src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt="Customization Icon">
+        <h2>Customization</h2>
+        <p>I'll create a custom-designed solution that fits your goals perfectly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="projects">
+    <h2>Recent Projects</h2>
+    <p>⇓ Click to View</p>
+
+    <div class="project-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b03?w=600" alt="Project 1">
+          </div>
+          <div class="card-back">
+            <h3>Beauty Website</h3>
+            <p>Elegant design for salon & spa services.</p>
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600" alt="Project 2">
+          </div>
+          <div class="card-back">
+            <h3>Business Portfolio</h3>
+            <p>Responsive layout for company branding.</p>
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600" alt="Project 3">
+          </div>
+          <div class="card-back">
+            <h3>Resort Website</h3>
+            <p>Luxury resort web experience with booking feature.</p>
+            <a href="#" class="btn">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Let's talk about your website or project. Send a message and get in touch with me.</p>
+
+    <div class="contact-container">
+      <!-- Left Box -->
+      <div class="contact-form">
+        <form action="#" method="post" enctype="multipart/form-data">
+          <div class="input-group">
+            <i class="fa fa-user"></i>
+            <input type="text" name="name" placeholder="Name" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required>
+          </div>
+
+          <div class="input-group">
+            <i class="fa fa-tag"></i>
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+
+          <!-- ✅ New Photo Upload Box -->
+          <div class="input-group file-upload">
+            <i class="fa fa-image"></i>
+            <input type="file" name="photo" accept="image/*">
+          </div>
+
+          <div class="input-group textarea">
+            <i class="fa fa-message"></i>
+            <textarea name="message" placeholder="Enter Message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+
+      <!-- Right Box -->
+      <div class="contact-info">
+        <h3>My Phone</h3>
+        <p><i class="fa-brands fa-whatsapp"></i> +91 6378867951</p>
+
+        <h3>Email Address</h3>
+        <p><i class="fa-solid fa-envelope"></i> arvindkumarsikandra2002@gmail.com</p>
+
+        <div class="image-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Hello Image">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,544 @@
+/* -------- RESET -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #222;
+  transition: 0.4s ease;
+}
+
+/* -------- NAVBAR -------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  background: #fff;
+  border-bottom: 2px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.logo span { color: #c03a2b; }
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.navbar ul li a:hover, .navbar ul li a.active { color: #c03a2b; }
+
+#toggle {
+  background: #c03a2b;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+/* -------- HERO -------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 8%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.hero-left h3 { color: #555; }
+.hero-left h1 { font-size: 3rem; color: #333; }
+.hero-left h1 span { color: #c03a2b; }
+.hero-left h2 { color: #555; margin: 10px 0 20px; }
+.hero-left h2 span { color: #c03a2b; }
+
+.buttons .btn {
+  background: #c03a2b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.buttons .btn:hover { background: #a62c1e; }
+
+.hero-right .circle-frame {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.hero-right img { width: 100%; height: 100%; object-fit: cover; }
+
+/* -------- ABOUT -------- */
+.about-section {
+  background-color: #fff5f5;
+  padding: 80px 10%;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-text { flex: 1 1 45%; }
+.about-text h3 { color: #d46a6a; }
+.about-text h1 { color: #111; margin: 10px 0; }
+.about-text p { color: #444; line-height: 1.6; margin-bottom: 10px; }
+.about-text .quote { color: #e17055; font-style: italic; }
+.about-image { flex: 1 1 45%; text-align: center; }
+.about-image img { width: 80%; max-width: 400px; }
+
+/* -------- SERVICES -------- */
+.services-section {
+  text-align: center;
+  padding: 80px 8%;
+  background: #f9f4f2;
+}
+.section-subtitle { color: #c04b4b; }
+.section-title { font-size: 2rem; margin-bottom: 40px; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Glow Cards */
+.service-card {
+  position: relative;
+  border-radius: 1rem;
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-10px); }
+
+.glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background-size: 400% 400%;
+  animation: moveBorder 3s linear infinite;
+  z-index: 0;
+}
+.glow::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: inherit;
+  background: #fff;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+.inner h2 { margin-bottom: 10px; }
+
+.electric-blue .glow { background: linear-gradient(45deg, #00ffff, #0077ff, #00ffff); }
+.electric-orange .glow { background: linear-gradient(45deg, #ffae00, #ff4d00, #ffae00); }
+.electric-pink .glow { background: linear-gradient(45deg, #ff00ff, #ff1493, #ff00ff); }
+.electric-green .glow { background: linear-gradient(45deg, #00ff88, #00ff44, #00ff88); }
+.electric-purple .glow { background: linear-gradient(45deg, #b700ff, #7300ff, #b700ff); }
+
+@keyframes moveBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* -------- DARK MODE -------- */
+body.dark {
+  background: #0f0f0f;
+  color: #eee;
+}
+body.dark .navbar { background: #1a1a1a; }
+body.dark .hero, body.dark .about-section, body.dark .services-section {
+  background: #121212;
+}
+body.dark .btn { background: #ff6b6b; color: #000; }
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 900px) {
+  .hero, .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.services-section {
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.section-subtitle {
+  color: #c0392b;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 2em;
+  margin: 10px 0 40px;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.service-card {
+  position: relative;
+  width: 280px;
+  height: 240px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.service-card .inner {
+  padding: 20px;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.service-card h2 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Electric Glow Effects */
+.electric-blue:hover {
+  box-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff;
+}
+
+.electric-orange:hover {
+  box-shadow: 0 0 15px #ff8800, 0 0 30px #ff8800;
+}
+
+.electric-pink:hover {
+  box-shadow: 0 0 15px #ff00aa, 0 0 30px #ff00aa;
+}
+
+.electric-green:hover {
+  box-shadow: 0 0 15px #00ff77, 0 0 30px #00ff77;
+}
+
+.electric-purple:hover {
+  box-shadow: 0 0 15px #9b59b6, 0 0 30px #9b59b6;
+}
+/* ===== General Styling ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #faf6f4;
+  color: #333;
+  text-align: center;
+}
+
+/* ===== Section Title ===== */
+.projects {
+  padding: 60px 0;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #b14b4b;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* ===== Card Container ===== */
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* ===== Card Base ===== */
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* ===== Front Side ===== */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Front (Image) ===== */
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Back Side ===== */
+.card-back {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+.card-back h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.card-back p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background: #fff;
+  color: #f5576c;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #f5576c;
+  color: #fff;
+}
+/* =========== Base Styling =========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #faf6f4;
+  color: #333;
+}
+
+.contact {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #b14b4b;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* =========== Contact Container =========== */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* =========== Left Form =========== */
+.contact-form {
+  flex: 1 1 45%;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #b14b4b;
+  font-size: 16px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 2px solid #f1b4b4;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #b14b4b;
+}
+
+/* ✅ File Upload Input */
+.file-upload input[type="file"] {
+  padding: 10px 40px;
+  cursor: pointer;
+}
+
+/* =========== Message Box =========== */
+.input-group.textarea textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* =========== Button =========== */
+.btn {
+  background: #b14b4b;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 150px;
+  align-self: center;
+}
+
+.btn:hover {
+  background: #912e2e;
+}
+
+/* =========== Right Info Box =========== */
+.contact-info {
+  flex: 1 1 45%;
+  text-align: left;
+  padding: 20px;
+}
+
+.contact-info h3 {
+  margin-top: 10px;
+  color: #b14b4b;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #b14b4b;
+}
+
+.image-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-box img {
+  width: 180px;
+  height: auto;
+}
+
+/* =========== Responsive =========== */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
